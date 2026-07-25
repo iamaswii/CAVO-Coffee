@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  // --- Mobile 60fps Scroll Smoothness Patch ---
+  let passiveSupported = false;
+  try {
+    const options = Object.defineProperty({}, 'passive', {
+      get: function() { passiveSupported = true; }
+    });
+    window.addEventListener('test', null, options);
+  } catch (err) {}
+
+  window.addEventListener('touchmove', function() {}, passiveSupported ? { passive: true } : false);
+
   // --- Cart State ---
   let cart = [];
   const taxRate = 0.08;
