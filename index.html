@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAVO Coffee</title>
+  <meta name="description" content="Next-Gen Artisanal Coffee Experience. Sleek Glassmorphism, 3D cards, and instant order workflow." />
+  
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Neon Glass Mesh Glows -->
+  <div class="mesh-glow mesh-1"></div>
+  <div class="mesh-glow mesh-2"></div>
+  <div class="mesh-glow mesh-3"></div>
+
+  <!-- Ultra-Sleek Glass Nav -->
+  <nav class="cyber-glass-nav" id="mainNav">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon-glow">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">CAVO</span>
+          <span class="brand-tag">COFFEE </span>
+        </div>
+      </a>
+
+      <div class="nav-pill-menu">
+        <a href="#hero" class="nav-pill active">Home</a>
+        <a href="#menu" class="nav-pill">Menu</a>
+        <a href="#experience" class="nav-pill">Specs</a>
+        <a href="#lounge" class="nav-pill">Lounge</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="cyber-glass-btn cart-trigger-btn" id="openCartBtn">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Tray</span>
+          <span class="cyber-cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Futuristic Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+      <div class="hero-text-block scroll-reveal">
+        <div class="cyber-badge">
+          <span class="pulse-dot"></span> NEXT-GEN BREWING LAB
+        </div>
+        <h1 class="hero-title">
+          FUTURE OF <br /><span class="neon-text-gradient">CRAFT COFFEE</span>
+        </h1>
+        <p class="hero-subtext">
+          Where Exceptional Single-Origin Espresso Meets Modern Luxury.
+          Crafted to perfection. Served in an atmosphere designed for the refined palate.
+        </p>
+
+        <div class="hero-btn-group">
+          <a href="#menu" class="cyber-btn primary-cyber-btn">
+            <span>Explore Menu</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+          <button class="cyber-btn glass-outline-btn" id="quickOrderHeroBtn">
+            <i class="fa-solid fa-fire"></i>
+            <span>Quick Order</span>
+          </button>
+        </div>
+
+        <!-- Sleek Stats Bar (Synced with script.js counters) -->
+        <div class="cyber-stats-bar hero-stats-box">
+          <div class="stat-cell stat-item">
+            <h3 id="statScore">0<span>%</span></h3>
+            <p>Score Arabica</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-cell stat-item">
+            <h3 id="statSteep">0<span>h</span></h3>
+            <p>Cold Steep</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-cell stat-item">
+            <h3 id="statTime">0<span>min</span></h3>
+            <p>Avg Brew Time</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual-block scroll-reveal" data-delay="150">
+        <div class="cyber-glass-card hero-glass-card glass-card-3d">
+          <div class="card-glow-reflection"></div>
+          <img src="FUTURE OF.jpg" alt="Cavo Coffee Signature Brew" class="hero-img" onerror="this.src='https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop'" />
+          <div class="floating-tech-chip">
+            <i class="fa-solid fa-microchip"></i>
+            <div>
+              <strong>Aroma Temp: 93.5°C</strong>
+              <span>Peak Flavor Extraction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compact Specs Section -->
+  <section class="specs-section" id="experience">
+    <div class="section-container">
+      <div class="specs-grid">
+        <div class="cyber-glass-card spec-card scroll-reveal" data-delay="100">
+          <div class="spec-icon"><i class="fa-solid fa-atom"></i></div>
+          <h4>Micro-Farm Origin</h4>
+          <p>Direct trade 100% Arabica harvested at high elevation.</p>
+        </div>
+        <div class="cyber-glass-card spec-card scroll-reveal" data-delay="200">
+          <div class="spec-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+          <h4>Thermal Precision</h4>
+          <p>In-house flame roasted for rich velvety crema.</p>
+        </div>
+        <div class="cyber-glass-card spec-card scroll-reveal" data-delay="300">
+          <div class="spec-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+          <h4>Instant Glass Order</h4>
+          <p>Order in 2 clicks with animated barista status.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compact Modern Menu Section -->
+  <section class="compact-menu-section" id="menu">
+    <div class="section-container">
+      <div class="section-header-compact scroll-reveal">
+        <span class="compact-tag">CRAFT MENU </span>
+        <h2 class="compact-title">Sleek & Selected.</h2>
+        
+        <div class="cyber-tab-group">
+          <button class="cyber-tab active" data-category="all">All Items</button>
+          <button class="cyber-tab" data-category="hot">Hot Brews</button>
+          <button class="cyber-tab" data-category="cold">Iced & Cold</button>
+          <button class="cyber-tab" data-category="treats">Delights</button>
+        </div>
+      </div>
+
+      <div class="compact-glass-grid" id="menuGrid">
+
+        <!-- Card 1 -->
+        <div class="cyber-glass-card menu-compact-card glass-card-3d scroll-reveal" data-category="hot" data-delay="100">
+          <div class="compact-card-media">
+            <img src="Caramel Latte.jpg" alt="Caramel Latte" onerror="this.src='https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=500&auto=format&fit=crop'"/>
+            <span class="compact-price">₹240.00</span>
+          </div>
+          <div class="compact-card-content">
+            <div class="compact-card-top">
+              <span class="compact-meta"><i class="fa-solid fa-star"></i> 4.9</span>
+              <span class="compact-cal">220 kcal</span>
+            </div>
+            <h3 class="compact-item-name">Caramel Latte</h3>
+            <p class="compact-item-sub">Velvet espresso, steamed milk, golden caramel drizzle.</p>
+            <button class="cyber-btn card-add-btn" data-id="1" data-name="Caramel Latte" data-price="240" data-img="Caramel Latte.jpg">
+              <span>+ Add to Order</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="cyber-glass-card menu-compact-card glass-card-3d scroll-reveal" data-category="cold" data-delay="200">
+          <div class="compact-card-media">
+            <img src="Iced Vanilla Latte.jpg" alt="Iced Vanilla Latte" onerror="this.src='https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=500&auto=format&fit=crop'"/>
+            <span class="compact-price">₹260.00</span>
+          </div>
+          <div class="compact-card-content">
+            <div class="compact-card-top">
+              <span class="compact-meta"><i class="fa-solid fa-star"></i> 5.0</span>
+              <span class="compact-cal">190 kcal</span>
+            </div>
+            <h3 class="compact-item-name">Iced Vanilla Latte</h3>
+            <p class="compact-item-sub">Double shot espresso, cold oat milk, vanilla bean pod.</p>
+            <button class="cyber-btn card-add-btn" data-id="2" data-name="Iced Vanilla Latte" data-price="260" data-img="Iced Vanilla Latte.jpg">
+              <span>+ Add to Order</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="cyber-glass-card menu-compact-card glass-card-3d scroll-reveal" data-category="hot" data-delay="300">
+          <div class="compact-card-media">
+            <img src="Mocha Bliss.jpg" alt="Mocha Bliss" onerror="this.src='https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?q=80&w=500&auto=format&fit=crop'"/>
+            <span class="compact-price">₹280.00</span>
+          </div>
+          <div class="compact-card-content">
+            <div class="compact-card-top">
+              <span class="compact-meta"><i class="fa-solid fa-star"></i> 4.8</span>
+              <span class="compact-cal">280 kcal</span>
+            </div>
+            <h3 class="compact-item-name">Mocha Bliss</h3>
+            <p class="compact-item-sub">Belgian dark chocolate, espresso, cocoa dust.</p>
+            <button class="cyber-btn card-add-btn" data-id="3" data-name="Mocha Bliss" data-price="280" data-img="Mocha Bliss.jpg">
+              <span>+ Add to Order</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="cyber-glass-card menu-compact-card glass-card-3d scroll-reveal" data-category="treats" data-delay="400">
+          <div class="compact-card-media">
+            <img src="Dark Chocolate Fudge.jpg" alt="Dark Chocolate Fudge" onerror="this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=500&auto=format&fit=crop'"/>
+            <span class="compact-price">₹220.00</span>
+          </div>
+          <div class="compact-card-content">
+            <div class="compact-card-top">
+              <span class="compact-meta"><i class="fa-solid fa-star"></i> 4.9</span>
+              <span class="compact-cal">340 kcal</span>
+            </div>
+            <h3 class="compact-item-name">Dark Chocolate Fudge</h3>
+            <p class="compact-item-sub">Rich cocoa layer cake served warm with espresso dip.</p>
+            <button class="cyber-btn card-add-btn" data-id="4" data-name="Dark Chocolate Fudge" data-price="220" data-img="Dark Chocolate Fudge.jpg">
+              <span>+ Add to Order</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="cyber-glass-card menu-compact-card glass-card-3d scroll-reveal" data-category="cold" data-delay="500">
+          <div class="compact-card-media">
+            <img src="Hazelnut Cold Brew.jpg" alt="Hazelnut Cold Brew" onerror="this.src='https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=500&auto=format&fit=crop'"/>
+            <span class="compact-price">₹290.00</span>
+          </div>
+          <div class="compact-card-content">
+            <div class="compact-card-top">
+              <span class="compact-meta"><i class="fa-solid fa-star"></i> 4.9</span>
+              <span class="compact-cal">140 kcal</span>
+            </div>
+            <h3 class="compact-item-name">Hazelnut Cold Brew</h3>
+            <p class="compact-item-sub">24-hour cold steep, roasted hazelnut, velvet float.</p>
+            <button class="cyber-btn card-add-btn" data-id="5" data-name="Hazelnut Cold Brew" data-price="290" data-img="Hazelnut Cold Brew.jpg">
+              <span>+ Add to Order</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="cyber-glass-card menu-compact-card glass-card-3d scroll-reveal" data-category="hot" data-delay="600">
+          <div class="compact-card-media">
+            <img src="Ristretto Macchiato.jpg" alt="Ristretto Macchiato" onerror="this.src='https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=500&auto=format&fit=crop'"/>
+            <span class="compact-price">₹210.00</span>
+          </div>
+          <div class="compact-card-content">
+            <div class="compact-card-top">
+              <span class="compact-meta"><i class="fa-solid fa-star"></i> 4.7</span>
+              <span class="compact-cal">90 kcal</span>
+            </div>
+            <h3 class="compact-item-name">Ristretto Macchiato</h3>
+            <p class="compact-item-sub">Double intense shot with dense micro-foam dot.</p>
+            <button class="cyber-btn card-add-btn" data-id="6" data-name="Ristretto Macchiato" data-price="210" data-img="Ristretto Macchiato.jpg">
+              <span>+ Add to Order</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Lounge Banner -->
+  <section class="lounge-section" id="lounge">
+    <div class="section-container">
+      <div class="cyber-glass-card lounge-card scroll-reveal">
+        <div class="lounge-content">
+          <span class="compact-tag">ACOUSTIC GLASS LOUNGE</span>
+          <h2>Designed for Focus & Ambiance.</h2>
+          <p>Ultra-quiet acoustic glass partitions, high-speed fiber WiFi, and ambient lighting zones.</p>
+        </div>
+        <div class="lounge-badges">
+          <span class="lounge-pill"><i class="fa-solid fa-wifi"></i> Gigabit Fiber</span>
+          <span class="lounge-pill"><i class="fa-solid fa-plug"></i> USB-C Power</span>
+          <span class="lounge-pill"><i class="fa-solid fa-clock"></i> 7 AM - 11 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cyber Footer -->
+  <footer class="cyber-footer">
+    <div class="section-container">
+      <div class="footer-row">
+        <div class="footer-brand">
+          <span class="brand-name">CAVO </span>
+          <p>Cyber-Luxe Artisanal Coffee</p>
+        </div>
+        <div class="footer-copy">
+          &copy; 2026 CAVO Coffee. Modern Glass UI Engine.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK ORDER TRAY DRAWER -->
+  <div class="cyber-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cyber-glass-drawer" id="cartDrawer">
+    <div class="drawer-top">
+      <div class="drawer-brand">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Order Tray</h3>
+      </div>
+      <button class="close-cyber-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="drawer-items-list" id="cartItemsContainer">
+      <div class="empty-tray-msg" id="emptyCartState">
+        <i class="fa-solid fa-mug-hot"></i>
+        <p>Tray is empty</p>
+        <span>Select items from menu to order</span>
+      </div>
+    </div>
+
+    <div class="drawer-bottom" id="cartFooter">
+      <div class="cost-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">₹0.00</span>
+      </div>
+      <div class="cost-row">
+        <span>Tax (8%)</span>
+        <span id="cartTax">₹0.00</span>
+      </div>
+      <div class="cost-row main-total">
+        <span>Total</span>
+        <span id="cartTotal">₹0.00</span>
+      </div>
+
+      <button class="cyber-btn primary-cyber-btn checkout-btn" id="placeOrderBtn" disabled>
+        <span>Proceed to Pay</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- PAYMENT METHOD MODAL -->
+  <div class="cyber-modal-overlay" id="paymentModalOverlay">
+    <div class="cyber-glass-card payment-modal">
+      <button class="close-modal-x" id="closePaymentBtn"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="payment-header">
+        <i class="fa-solid fa-wallet"></i>
+        <h3>Select Payment Method</h3>
+        <p class="pay-amount-text">Amount to Pay: <strong id="payModalAmount">₹0.00</strong></p>
+      </div>
+
+      <div class="payment-options">
+        <!-- Option 1: UPI / GPay -->
+        <label class="pay-option active">
+          <input type="radio" name="payMethod" value="upi" checked />
+          <div class="pay-option-content">
+            <i class="fa-solid fa-qrcode"></i>
+            <div>
+              <strong>UPI / Instant QR</strong>
+              <span>GPay, PhonePe, Paytm, BHIM</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Option 2: Card -->
+        <label class="pay-option">
+          <input type="radio" name="payMethod" value="card" />
+          <div class="pay-option-content">
+            <i class="fa-solid fa-credit-card"></i>
+            <div>
+              <strong>Credit / Debit Card</strong>
+              <span>Visa, Mastercard, RuPay</span>
+            </div>
+          </div>
+        </label>
+
+        <!-- Option 3: Counter Cash -->
+        <label class="pay-option">
+          <input type="radio" name="payMethod" value="cash" />
+          <div class="pay-option-content">
+            <i class="fa-solid fa-money-bill-wave"></i>
+            <div>
+              <strong>Pay at Counter</strong>
+              <span>Cash or Card on Pickup</span>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Dynamic UPI View -->
+      <div class="pay-detail-box" id="upiDetailBox">
+        <div class="qr-placeholder">
+          <i class="fa-solid fa-qrcode qr-icon-large"></i>
+          <p>Scan with any UPI App</p>
+        </div>
+      </div>
+
+      <button class="cyber-btn primary-cyber-btn confirm-pay-btn" id="confirmPayBtn">
+        <span>Complete Payment</span>
+        <i class="fa-solid fa-check"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- FUTURISTIC ORDER PROGRESS MODAL -->
+  <div class="cyber-modal-overlay" id="orderModalOverlay">
+    <div class="cyber-glass-card order-progress-modal">
+      <button class="close-modal-x" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+
+      <div class="modal-ring-container">
+        <div class="glowing-ring"></div>
+        <div class="ring-icon-box" id="statusIconWrap">
+          <i class="fa-solid fa-fire"></i>
+        </div>
+      </div>
+
+      <h3 class="modal-title" id="statusTitle">Order Transmitted!</h3>
+      <p class="modal-sub" id="statusDesc">Initializing espresso extraction...</p>
+
+      <div class="cyber-progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="receipt-glass-chip">
+        <div class="receipt-line">
+          <span>TICKET ID</span>
+          <strong id="orderTicketNum">#9042</strong>
+        </div>
+        <div class="receipt-items-mini" id="receiptItemsList"></div>
+        <div class="receipt-line border-top">
+          <span>PAID TOTAL</span>
+          <strong id="receiptTotalVal">₹0.00</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flying Particle Container & Toast -->
+  <div id="particleContainer"></div>
+  <div class="toast-stack" id="toastContainer"></div>
+
+  <!-- External Script Link -->
+  <script src="script.js"></script>
+</body>
+</html>
