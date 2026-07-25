@@ -1,16 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-  // --- Mobile 60fps Scroll Smoothness Patch ---
-  let passiveSupported = false;
-  try {
-    const options = Object.defineProperty({}, 'passive', {
-      get: function() { passiveSupported = true; }
-    });
-    window.addEventListener('test', null, options);
-  } catch (err) {}
-
-  window.addEventListener('touchmove', function() {}, passiveSupported ? { passive: true } : false);
-
   // --- Cart State ---
   let cart = [];
   const taxRate = 0.08;
@@ -356,9 +344,8 @@ document.addEventListener('DOMContentLoaded', () => {
   animateCounter('statScore', 98, '%', 1200);
   animateCounter('statSteep', 24, 'h', 1000);
   animateCounter('statTime', 3, 'min', 800);
-  // --- 10. Mobile Lag Optimizer (Disables Heavy 3D & Mouse Events on Mobile) ---
   if (window.innerWidth <= 900) {
-    // മൊബൈലിൽ 3D കാർഡ് ടിൽറ്റ് ഇഫക്റ്റ് പൂർണ്ണമായി ഓഫ് ചെയ്യുക
+    
     glassCards.forEach(card => {
       card.replaceWith(card.cloneNode(true)); // Existing mouse listeners ഒഴിവാക്കാൻ
     });
