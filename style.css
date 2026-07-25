@@ -7,7 +7,7 @@
   --bg-coffee-body: #24140e;
 
   /* Premium Coffee Warm Accents */
-  --neon-cyan: #f39c12;        /* Warm Golden Amber */
+  --neon-cyan: #f39c12;       /* Warm Golden Amber */
   --neon-purple: #e65c00;      /* Rich Espresso Warm Orange */
   --neon-green: #00ff88;       /* Order Complete Status Green */
   --neon-gold: #ffbe3b;        /* Soft Creamy Gold */
@@ -411,7 +411,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* --- 7. Craft Menu Section --- */
+/* --- 7. Craft Menu Section (Subtle Chamfered / Octopus Style Cards) --- */
 .compact-menu-section {
   padding: 80px 0;
 }
@@ -465,10 +465,12 @@ body {
   gap: 24px;
 }
 
+/* 🌟 SUBTLE CHAMFERED / OCTOPUS SHAPE CARDS */
 .menu-compact-card {
   background: var(--bg-card);
   backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
+  /* വളരെ സോഫ്റ്റ് ആയ ഒക്ടോഗൺ ലുക്കിനായി ചെറിയ കട്ടിങ് (12px) */
   clip-path: polygon(
     12px 0%, 
     calc(100% - 12px) 0%, 
@@ -971,16 +973,6 @@ body {
 
 /* --- 13. Responsive Styles --- */
 @media (max-width: 900px) {
-  /* മൊബൈലിൽ നെവ്‌ബാർ ഫിക്സഡ് ഒഴിവാക്കി സ്ക്രോളിന് ഒപ്പം പോകാന്‍ മാറ്റുന്നു */
-  .cyber-glass-nav {
-    position: relative !important;
-    top: 0 !important;
-  }
-
-  .hero-section {
-    padding-top: 40px; /* മൊബൈലിൽ മുകളിലെ ഗ്യാപ്പ് കുറയ്ക്കാൻ */
-  }
-
   .hero-container {
     grid-template-columns: 1fr;
   }
