@@ -971,7 +971,7 @@ body {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* --- 13. Responsive Styles --- */
+/* --- 13. Responsive Styles & 60 FPS Mobile Optimization --- */
 @media (max-width: 900px) {
   .hero-container {
     grid-template-columns: 1fr;
@@ -983,8 +983,7 @@ body {
     width: 100%;
     right: -100%;
   }
-  /* --- മൊബൈൽ വ്യൂ ലാഗ് ഒഴിവാക്കാനും സ്മൂത്ത് ആക്കാനുമുള്ള എക്സ്ട്രാ കോഡ് (ഒറിജിനൽ കോഡ് മാറ്റമില്ലാതെ) --- */
-@media screen and (max-width: 900px) {
+
   /* 1. മൊബൈലിൽ സ്ക്രോളിംഗ് പെട്ടെന്ന് സ്മൂത്ത് ആക്കാൻ */
   html {
     scroll-behavior: smooth;
@@ -1010,10 +1009,15 @@ body {
     opacity: 0.25 !important;
   }
 
-  /* 4. GPU റെൻഡറിങ് സജീവമാക്കി ഫോൺ പെട്ടെന്ന് ലോഡ് ചെയ്യാൻ സഹായിക്കാൻ */
+  /* 4. GPU റെൻഡറിങ് & 60 FPS ഫോഴ്സ് ചെയ്യാൻ */
   body, .hero-section, .compact-menu-section {
-    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
+    perspective: 1000px;
   }
-}
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
