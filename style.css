@@ -971,7 +971,7 @@ body {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* --- 13. Responsive Styles & 60 FPS Mobile Optimization --- */
+/* --- 13. Responsive Styles --- */
 @media (max-width: 900px) {
   .hero-container {
     grid-template-columns: 1fr;
@@ -982,42 +982,5 @@ body {
   .cyber-glass-drawer {
     width: 100%;
     right: -100%;
-  }
-
-  /* 1. മൊബൈലിൽ സ്ക്രോളിംഗ് പെട്ടെന്ന് സ്മൂത്ത് ആക്കാൻ */
-  html {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* 2. മൊബൈൽ വ്യൂവിൽ ഗ്ലാസ് മോർഫിസം ബ്ലറുകൾ കുറച്ച് ലാഗ് മാറ്റാൻ */
-  .bg-card, 
-  .cyber-stats-bar, 
-  .spec-card, 
-  .menu-compact-card, 
-  .lounge-card, 
-  .cyber-glass-drawer, 
-  .payment-modal, 
-  .order-progress-modal {
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-  }
-
-  /* 3. ഹെവി ആനിമേഷനുകളും ഷാഡോകളും കുറച്ച് പെർഫോമൻസ് കൂട്ടാൻ */
-  .mesh-glow {
-    filter: blur(80px) !important;
-    opacity: 0.25 !important;
-  }
-
-  /* 4. GPU റെൻഡറിങ് & 60 FPS ഫോഴ്സ് ചെയ്യാൻ */
-  body, .hero-section, .compact-menu-section {
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-
-  * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 }
