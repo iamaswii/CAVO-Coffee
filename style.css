@@ -7,7 +7,7 @@
   --bg-coffee-body: #24140e;
 
   /* Premium Coffee Warm Accents */
-  --neon-cyan: #f39c12;       /* Warm Golden Amber */
+  --neon-cyan: #f39c12;        /* Warm Golden Amber */
   --neon-purple: #e65c00;      /* Rich Espresso Warm Orange */
   --neon-green: #00ff88;       /* Order Complete Status Green */
   --neon-gold: #ffbe3b;        /* Soft Creamy Gold */
@@ -969,8 +969,18 @@ body {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* --- 13. Responsive Styles, Mobile Scroll Fix & 60 FPS Optimization --- */
+/* --- 13. Responsive Styles --- */
 @media (max-width: 900px) {
+  /* മൊബൈലിൽ നെവ്‌ബാർ ഫിക്സഡ് ഒഴിവാക്കി സ്ക്രോളിന് ഒപ്പം പോകാന്‍ മാറ്റുന്നു */
+  .cyber-glass-nav {
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  .hero-section {
+    padding-top: 40px; /* മൊബൈലിൽ മുകളിലെ ഗ്യാപ്പ് കുറയ്ക്കാൻ */
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
   }
@@ -980,52 +990,5 @@ body {
   .cyber-glass-drawer {
     width: 100%;
     right: -100%;
-  }
-
-  /* ഫോണിൽ നെവ്‌ബാർ സ്ക്രോളിന് ഒപ്പം താഴേക്ക് പോകാൻ (Relative positioning) */
-  .cyber-glass-nav {
-    position: relative !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    margin-bottom: 16px !important;
-  }
-
-  /* 1. മൊബൈലിൽ സ്ക്രോളിംഗ് പെട്ടെന്ന് സ്മൂത്ത് ആക്കാൻ */
-  html {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* 2. മൊബൈൽ വ്യൂവിൽ ഗ്ലാസ് മോർഫിസം ബ്ലറുകൾ കുറച്ച് ലാഗ് മാറ്റാൻ */
-  .bg-card, 
-  .cyber-stats-bar, 
-  .spec-card, 
-  .menu-compact-card, 
-  .lounge-card, 
-  .cyber-glass-drawer, 
-  .payment-modal, 
-  .order-progress-modal {
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-  }
-
-  /* 3. ഹെവി ആനിമേഷനുകളും ഷാഡോകളും കുറച്ച് പെർഫോമൻസ് കൂട്ടാൻ */
-  .mesh-glow {
-    filter: blur(80px) !important;
-    opacity: 0.25 !important;
-  }
-
-  /* 4. GPU റെൻഡറിങ് & 60 FPS ഫോഴ്സ് ചെയ്യാൻ */
-  body, .hero-section, .compact-menu-section {
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-
-  * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 }
