@@ -344,10 +344,4 @@ document.addEventListener('DOMContentLoaded', () => {
   animateCounter('statScore', 98, '%', 1200);
   animateCounter('statSteep', 24, 'h', 1000);
   animateCounter('statTime', 3, 'min', 800);
-  if (window.innerWidth <= 900) {
-    
-    glassCards.forEach(card => {
-      card.replaceWith(card.cloneNode(true)); // Existing mouse listeners ഒഴിവാക്കാൻ
-    });
-  }
 });
