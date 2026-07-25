@@ -983,4 +983,37 @@ body {
     width: 100%;
     right: -100%;
   }
+  /* --- മൊബൈൽ വ്യൂ ലാഗ് ഒഴിവാക്കാനും സ്മൂത്ത് ആക്കാനുമുള്ള എക്സ്ട്രാ കോഡ് (ഒറിജിനൽ കോഡ് മാറ്റമില്ലാതെ) --- */
+@media screen and (max-width: 900px) {
+  /* 1. മൊബൈലിൽ സ്ക്രോളിംഗ് പെട്ടെന്ന് സ്മൂത്ത് ആക്കാൻ */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 2. മൊബൈൽ വ്യൂവിൽ ഗ്ലാസ് മോർഫിസം ബ്ലറുകൾ കുറച്ച് ലാഗ് മാറ്റാൻ */
+  .bg-card, 
+  .cyber-stats-bar, 
+  .spec-card, 
+  .menu-compact-card, 
+  .lounge-card, 
+  .cyber-glass-drawer, 
+  .payment-modal, 
+  .order-progress-modal {
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+
+  /* 3. ഹെവി ആനിമേഷനുകളും ഷാഡോകളും കുറച്ച് പെർഫോമൻസ് കൂട്ടാൻ */
+  .mesh-glow {
+    filter: blur(80px) !important;
+    opacity: 0.25 !important;
+  }
+
+  /* 4. GPU റെൻഡറിങ് സജീവമാക്കി ഫോൺ പെട്ടെന്ന് ലോഡ് ചെയ്യാൻ സഹായിക്കാൻ */
+  body, .hero-section, .compact-menu-section {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}
 }
